@@ -7,22 +7,18 @@
       <a>Benjamin Yde</a>
     </div>
 
-<!-- page items -->
-<ul>
-    {% for item in site.data.navigation %}
-    <li>
-      {% if page.url == item.link %} 
-        <a class="active" href="{{ item.link }}">{{ item.name }};</a>
-      {% else %}
-        <a class="underline-item hoverable" href="{{ item.link }}">{{ item.name }}</a>
-      {% endif %}
-    </li>
-  {% endfor %}
-</ul>
+    <!-- page items -->
+    <ul>
+        {% for item in site.data.navigation %}
+        <li>
+          {% if page.url == item.link %} 
+            <a class="active" href="{{ item.link }}">{{ item.name }}</a>
+          {% else %}
+            <a class="underline-item hoverable" href="{{ item.link }}">{{ item.name }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
 
   </div>
-
-
-
 </nav>
-<div id="nav-main-bottom-line"></div>
