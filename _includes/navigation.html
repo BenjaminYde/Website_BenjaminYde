@@ -2,9 +2,11 @@
   <ul>
     {% for item in site.data.navigation %}
       <li>
-        <a class="underline-item" href="{{ item.link }}" {% if page.url == item.link %} {% endif %}>
-          {{ item.name }}
-        </a>
+        {% if page.url == item.link %} 
+          <a class="active" href="{{ item.link }}">{{ item.name }}</a>
+        {% else %}
+          <a class="underline-item hoverable" href="{{ item.link }}">{{ item.name }}</a>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>

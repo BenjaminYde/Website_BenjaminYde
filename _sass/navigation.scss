@@ -2,6 +2,7 @@
 $content-width: 1000px;
 $breakpoint: 799px;
 $nav-height: 50px;
+$nav-item-height: 40px;
 $nav-background: #222;
 $nav-font-color: #ffffff;
 $link-hover-color: #f88233e1;
@@ -9,7 +10,7 @@ $link-hover-color: #f88233e1;
 // Outer navigation wrapper
 .navigation {
     background-color: $nav-background;
-    height: 50px;
+    height: $nav-height;
     margin: 0;
     padding: 0.2em;
     position: relative;
@@ -21,36 +22,46 @@ $link-hover-color: #f88233e1;
     left: 0px;
     width: 100%;
     text-align: center;
-    ul {
-        margin: 0;
-        padding: 0;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: large;
-        display: inline-block;
-        text-align: center;
-        li {
-            margin: 0;
-            padding: 0;
-            float:left;
-            a,
-            a:visited {
-                display: block;
-                padding: 0px 40px;
-                line-height: $nav-height;
-                color: $nav-font-color;
-                text-decoration: none;
-                border-radius: 2px;
-                &:hover {
-                    //background: $link-hover-color;
-                    color: $link-hover-color;
-                }
-                &:not(:only-child):after {
-                    padding-left: 4px;
-                    content: " ▾";
-                }
-            }
-        }
+}
+
+#nav-main ul {
+    margin: ($nav-height - $nav-item-height)/2;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    display: inline-block;
+    text-align: center;
+}
+
+#nav-main li {
+    margin: 0;
+    padding: 0 10px;
+    float:left;
+    line-height: $nav-item-height;
+    text-decoration: none;
+    display: block;
+}
+
+#nav-main .hoverable{
+    display: block;
+    padding: 0px 20px;
+    line-height: $nav-item-height;
+    color: $nav-font-color;
+    text-decoration: none;
+    &:hover {
+        //background: $link-hover-color;
+        color: $link-hover-color;
     }
+}
+
+#nav-main .active
+{
+    text-decoration: none;
+    padding: 0px 20px;
+    display: block;
+    color: #fff;
+    border-radius: 1px;
+    background-color: $link-hover-color;
 }
 
 .underline-animation {
