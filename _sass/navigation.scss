@@ -1,0 +1,98 @@
+// Navigation Variables
+$content-width: 1000px;
+$breakpoint: 799px;
+$nav-height: 50px;
+$nav-background: #222;
+$nav-font-color: #ffffff;
+$link-hover-color: #f88233e1;
+
+// Outer navigation wrapper
+.navigation {
+    background-color: $nav-background;
+    height: 50px;
+    margin: 0;
+    padding: 0.2em;
+    position: relative;
+}
+
+// Navigation
+#nav-main {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    ul {
+        margin: 0;
+        padding: 0;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: large;
+        display: inline-block;
+        text-align: center;
+        li {
+            margin: 0;
+            padding: 0;
+            float:left;
+            a,
+            a:visited {
+                display: block;
+                padding: 0px 40px;
+                line-height: $nav-height;
+                color: $nav-font-color;
+                text-decoration: none;
+                border-radius: 2px;
+                &:hover {
+                    //background: $link-hover-color;
+                    color: $link-hover-color;
+                }
+                &:not(:only-child):after {
+                    padding-left: 4px;
+                    content: " ▾";
+                }
+            }
+        }
+    }
+}
+
+.underline-animation {
+    .underline-item {
+        position: relative;
+
+        &:before {
+            left: 0;
+            bottom: 0;
+            content: "";
+            width: 100%;
+            height: 2px;
+            visibility: hidden;
+            position: absolute;
+            background-color: $link-hover-color;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s;
+        }
+
+        &:hover {
+            &:before {
+                visibility: visible;
+                -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+// Logo and branding
+.brand {
+    position: absolute;
+    padding-left: 20px;
+    float: left;
+    line-height: $nav-height;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    a,
+    a:visited {
+        color: $nav-font-color;
+        text-decoration: none;
+    }
+}
