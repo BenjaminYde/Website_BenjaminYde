@@ -1,36 +1,47 @@
 // Navigation Variables
 $content-width: 1000px;
 $breakpoint: 799px;
-$nav-height: 50px;
-$nav-item-height: 40px;
-$nav-background: #222;
-$nav-font-color: #ffffff;
+$nav-height: 60px;
+$nav-item-height: 35px;
+$nav-background: #fff;
+$nav-font-color: #444;
 $link-hover-color: #f88233e1;
 
-// Outer navigation wrapper
-.navigation {
+#nav-main {
     background-color: $nav-background;
     height: $nav-height;
     margin: 0;
-    padding: 0.2em;
-    position: relative;
-}
-
-// Navigation
-#nav-main {
-    position: absolute;
+    padding: 0;
     left: 0px;
     width: 100%;
-    text-align: center;
+    position: fixed;
+}
+
+#nav-main .nav-inner{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#nav-main .brand
+{
+    color: #fff;
+    background-color: $link-hover-color;
+    float: left;
+    font-family: monospace;
+    font-size: 1.7em;
+    line-height: $nav-height;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 #nav-main ul {
     margin: ($nav-height - $nav-item-height)/2;
     padding: 0;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: large;
-    display: inline-block;
-    text-align: center;
+    font-family: monospace;
+    font-size: x-large;
+    float: right;
+    vertical-align: middle;
 }
 
 #nav-main li {
@@ -38,20 +49,15 @@ $link-hover-color: #f88233e1;
     padding: 0 10px;
     float:left;
     line-height: $nav-item-height;
-    text-decoration: none;
     display: block;
 }
 
-#nav-main .hoverable{
+#nav-main li a {
+    text-transform: uppercase;
     display: block;
     padding: 0px 20px;
-    line-height: $nav-item-height;
     color: $nav-font-color;
     text-decoration: none;
-    &:hover {
-        //background: $link-hover-color;
-        color: $link-hover-color;
-    }
 }
 
 #nav-main .active
@@ -59,10 +65,31 @@ $link-hover-color: #f88233e1;
     text-decoration: none;
     padding: 0px 20px;
     display: block;
-    color: #fff;
     border-radius: 1px;
+    color: #fff;
     background-color: $link-hover-color;
 }
+
+/* #nav-main-bottom-line{
+    background-color: $link-hover-color;
+    height: 3px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+} */
+
+/* #nav-main-brand {
+    position: absolute;
+    float: left;
+    line-height: $nav-height;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    a,
+    a:visited {
+        color: $nav-font-color;
+        text-decoration: none;
+    }
+} */
 
 .underline-animation {
     .underline-item {
@@ -76,7 +103,7 @@ $link-hover-color: #f88233e1;
             height: 2px;
             visibility: hidden;
             position: absolute;
-            background-color: $link-hover-color;
+            background-color: #222;
             -webkit-transform: scaleX(0);
             transform: scaleX(0);
             -webkit-transition: all 0.3s ease-in-out 0s;
@@ -93,17 +120,3 @@ $link-hover-color: #f88233e1;
     }
 }
 
-// Logo and branding
-.brand {
-    position: absolute;
-    padding-left: 20px;
-    float: left;
-    line-height: $nav-height;
-    text-transform: uppercase;
-    font-size: 1.4em;
-    a,
-    a:visited {
-        color: $nav-font-color;
-        text-decoration: none;
-    }
-}

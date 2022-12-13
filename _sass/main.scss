@@ -1,8 +1,16 @@
 #body-main{
   margin: 0;
+  width: 70%;
+  margin-left: 15%;
+  background-color: #222;
 }
 
 @font-face {
 	font-family: "hubot-sans";
 	src: url("../fonts/hubot_sans/Hubot-Sans.ttf");
+}
+
+@font-face {
+	font-family: "mona-sans";
+	src: url("../fonts/mona_sans/Mona-Sans.ttf");
 }

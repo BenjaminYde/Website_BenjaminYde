@@ -1,13 +1,28 @@
-<nav class="navigation underline-animation" id="nav-main">
-  <ul>
+<nav class="underline-animation" id="nav-main">
+ 
+  <div class="nav-inner">
+
+    <!-- brand -->
+    <div class="brand">
+      <a>Benjamin Yde</a>
+    </div>
+
+<!-- page items -->
+<ul>
     {% for item in site.data.navigation %}
-      <li>
-        {% if page.url == item.link %} 
-          <a class="active" href="{{ item.link }}">{{ item.name }}</a>
-        {% else %}
-          <a class="underline-item hoverable" href="{{ item.link }}">{{ item.name }}</a>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
+    <li>
+      {% if page.url == item.link %} 
+        <a class="active" href="{{ item.link }}">{{ item.name }};</a>
+      {% else %}
+        <a class="underline-item hoverable" href="{{ item.link }}">{{ item.name }}</a>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
+  </div>
+
+
+
 </nav>
+<div id="nav-main-bottom-line"></div>
