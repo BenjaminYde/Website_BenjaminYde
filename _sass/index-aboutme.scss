@@ -1,0 +1,70 @@
+$color-font-title1: #f88233e1;
+$color-font-title2: #fff;
+$color-font-desc: #fff;
+
+#aboutme-summary {
+    color: #fff;
+    font-family: "Mona Sans";
+    margin-top: 75px;
+    height: 28em;
+}
+
+#aboutme-summary .body-left {
+    width: 60%;
+    float: left;
+}
+
+#aboutme-summary .body-right {
+    width: 40%;
+    float: right;
+}
+
+#aboutme-summary .title1 {
+    color: $color-font-title1;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#aboutme-summary .title2-1 {
+    color: color-font-title2;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#aboutme-summary .title2-2 {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 1.75em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#aboutme-summary .empty-space {
+    height: 45px;
+}
+
+#aboutme-summary .description {
+    color: $color-font-desc;
+    font-size: 1.5em;
+    width: 100%;
+}
+
+#aboutme-summary .profile_picture {
+    border-radius: 50%;
+    width: 350px;
+    border: 4px solid #ddd;
+    margin-left: auto;
+    vertical-align: middle;
+    margin-right: 0;
+    float: right;
+}
+
+.white_div {
+    background-color: #fff;
+    width: 100%;
+    left: 0px;
+    padding: 0.25rem 9999rem;
+    margin: 0 -9999rem;
+}

@@ -1,16 +1,107 @@
-#body-main{
+// fonts
+@font-face {
+  font-family: 'Mona Sans';
+  src:
+    url('../fonts/mona_sans/Mona-Sans.ttf')
+}
+
+// body
+.body-main{
   margin: 0;
-  width: 70%;
-  margin-left: 15%;
+  width: 60%;
+  margin-left: 20%;
   background-color: #222;
 }
 
-@font-face {
-	font-family: "hubot-sans";
-	src: url("../fonts/hubot_sans/Hubot-Sans.ttf");
+.white_div {
+  background-color: #fff;
+  width: 100%;
+  left: 0px;
+  padding: 0.25rem 9999rem;
+  margin: 0 -9999rem;
 }
 
-@font-face {
-	font-family: "mona-sans";
-	src: url("../fonts/mona_sans/Mona-Sans.ttf");
+// tags
+$color-tag: #333;
+$color-tag-hover: #d86214;
+
+.tag-collection {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 100%;
+}
+
+.tag-collection-header {
+  padding: 0;
+  margin: 0;
+  font-family: "Mona Sans";
+  color: #333;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.tags ul {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-family: "Mona Sans";
+}
+
+.tags li {
+  display: block;
+  position: sticky;
+  float:left;
+  margin-right: 30px;
+  margin-top: 15px;
+  background: $color-tag;
+  color: #fff;
+  line-height: 1.5em;
+  padding: 0.5em;
+  text-decoration: none;
+
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius: 10px 0 0 10px;
+  border-radius: 10px 0 0 10px;
+
+  -webkit-transition: background 200ms ease;
+  -moz-transition: background 200ms ease;
+  -o-transition: background 200ms ease;
+  -ms-transition: background 200ms ease;
+  transition: background 200ms ease;
+}
+
+
+.tags li:before {
+  background: $color-tag;
+  content: "";
+  height: 2.15em;
+  width: 2.1em;
+  position: absolute;
+  top: 0.2em;
+  right: -01em;
+  z-index: -1;
+
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+
+  -webkit-border-radius: 0.625em;
+  -moz-border-radius: 0.625em;
+  -o-border-radius: 0.625em;
+  -ms-border-radius: 0.625em;
+  border-radius: 0.625em;
+
+  -webkit-transition: background 200ms ease;
+  -moz-transition: background 200ms ease;
+  -o-transition: background 200ms ease;
+  -ms-transition: background 200ms ease;
+  transition: background 200ms ease;
+}
+
+.tags li:hover,
+.tags li:hover:before {
+  background: $color-tag-hover;
 }

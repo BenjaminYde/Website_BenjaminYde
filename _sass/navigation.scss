@@ -1,14 +1,21 @@
-// Navigation Variables
 $content-width: 1000px;
 $breakpoint: 799px;
 $nav-height: 60px;
 $nav-item-height: 35px;
 $nav-background: #fff;
-$nav-font-color: #444;
+$nav-font-color: #444444;
 $link-hover-color: #f88233e1;
 
 #nav-main {
     background-color: $nav-background;
+    height: $nav-height;
+    margin: 0;
+    padding: 0;
+    left: 0px;
+}
+
+#nav-main .nav-outer{
+    background-color: #fff;
     height: $nav-height;
     margin: 0;
     padding: 0;
@@ -18,9 +25,8 @@ $link-hover-color: #f88233e1;
 }
 
 #nav-main .nav-inner{
-    width: 70%;
-    margin-left: 15%;
-    margin-right: 15%;
+    position: fixed;
+    width: 60%;
 }
 
 #nav-main .brand
@@ -28,18 +34,23 @@ $link-hover-color: #f88233e1;
     color: #fff;
     background-color: $link-hover-color;
     float: left;
-    font-family: monospace;
-    font-size: 1.7em;
+    font-family: "Mona Sans";
+    font-size: 1.5em;
     line-height: $nav-height;
     padding-left: 2em;
     padding-right: 2em;
 }
 
+#nav-main .menu-items
+{
+    float: right;
+}
+
 #nav-main ul {
     margin: ($nav-height - $nav-item-height)/2;
     padding: 0;
-    font-family: monospace;
-    font-size: x-large;
+    font-family: "Mona Sans";
+    font-size: 1.25em;
     float: right;
     vertical-align: middle;
 }
@@ -53,7 +64,7 @@ $link-hover-color: #f88233e1;
 }
 
 #nav-main li a {
-    text-transform: uppercase;
+    text-transform: capitalize;
     display: block;
     padding: 0px 20px;
     color: $nav-font-color;
@@ -98,4 +109,3 @@ $link-hover-color: #f88233e1;
         }
     }
 }
-
