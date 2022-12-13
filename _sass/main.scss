@@ -11,6 +11,7 @@
   width: 60%;
   margin-left: 20%;
   background-color: #222;
+  overflow-x: hidden;
 }
 
 .white_div {
@@ -20,6 +21,25 @@
   padding: 0.25rem 9999rem;
   margin: 0 -9999rem;
 }
+
+.header1-orange{
+  padding: 0.15em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Mona Sans";
+  font-size: 2.5em;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background-color: #f88233;
+  justify-content: center;
+  width: 35%;
+}
+
+// headers
 
 // tags
 $color-tag: #333;
