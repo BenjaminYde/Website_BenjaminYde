@@ -2,3 +2,33 @@
 layout: default
 title: Blog
 ---
+
+{% for category in site.categories %}
+
+{% capture category_name %}{{ category | first }}{% endcapture %}
+<div class="header1-orange">{{ category_name | slugize }}</div>
+
+<div class="projects-grid">
+
+    {% for post in site.categories[category_name] reversed  %}
+
+        <!-- steel mill -->
+        <div class="project">
+
+            <img src="assets/posts/{{ category_name | slugize }}/{{post.name | replace: '.md', '' }}/thumbnail.png" class="project-image" />
+            <div class="project-button-read-more">Read More</div>
+    
+            <div class="project-title">{{post.title}}</div>
+            
+            <div class="badges">
+                <span>{{ post.date | date_to_string }}</span>
+            </div>
+            
+        </div>
+
+    {% endfor %}
+
+
+</div>
+
+{% endfor %}
