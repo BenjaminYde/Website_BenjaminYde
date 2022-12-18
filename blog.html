@@ -12,10 +12,18 @@ title: Blog
 
     {% for post in site.categories[category_name] reversed  %}
 
-        <!-- steel mill -->
         <div class="project">
 
-            <img src="assets/posts/{{ category_name | slugize }}/{{post.name | replace: '.md', '' }}/thumbnail.png" class="project-image" />
+            {% assign filename = "assets/posts/" | append: category_name | slugize | append: "/" | append: post.name | replace: '.md', '' | append: "/thumbnail" %}
+
+            {% capture gif_exists %}{% file_exists {{ filename }}.gif %}{% endcapture %}
+
+            {% if gif_exists == "true" %}
+            <img src="{{ filename }}.gif" class="project-image">
+            {% else %}
+            <img src="{{ filename }}.png" class="project-image" />
+            {% endif %}
+
             <div class="project-button-read-more">Read More</div>
     
             <div class="project-title">{{post.title}}</div>
@@ -23,7 +31,7 @@ title: Blog
             <div class="badges">
                 <span>{{ post.date | date_to_string }}</span>
             </div>
-            
+
         </div>
 
     {% endfor %}
