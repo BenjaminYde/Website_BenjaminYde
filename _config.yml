@@ -55,6 +55,3 @@ load_paths:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-whitelist:
-  - file_exists
