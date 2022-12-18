@@ -16,7 +16,7 @@ title: Blog
             
             {% assign my_variable = post.date | date: "%Y-%m-%d" %}
 
-            <img src="{{site.baseurl | prepend: site.url}}/assets/posts/{{ category_name }}/{{ my_variable }}-{{post.slug}}/thumbnail.{{post.thumbnail-extension}}" class="project-image">
+            <img src="{{site.baseurl}}/assets/blog/{{ category_name }}/{{ my_variable }}-{{post.slug}}/thumbnail.{{post.thumbnail-extension}}" class="project-image">
 
             <div class="project-button-read-more">Read More</div>
     
@@ -34,8 +34,3 @@ title: Blog
 </div>
 
 {% endfor %}
-
-
-
-assets/posts/Houdini/2019-09-15-getting-started-with-houdini/thumbnail.png
-assets/posts/Houdini/2019-09-15-getting-started-with-houdini/thumbnail.png
