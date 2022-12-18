@@ -56,5 +56,5 @@ load_paths:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-# Enable safe mode
-safe: true
+whitelist:
+  - file_exists
