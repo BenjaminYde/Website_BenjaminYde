@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: Houdini
+categories: houdini
 thumbnail-extension: gif
 ---
 
