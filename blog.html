@@ -13,15 +13,8 @@ title: Blog
     {% for post in site.categories[category_name] reversed  %}
 
         <div class="project">
-
-            {% assign filename = 
-                "assets/posts/" | 
-                append: category_name | slugize | 
-                append: "/" | 
-                append: post.name | replace: '.md', '' | 
-                append: "/thumbnail"  %}
             
-            <img src="{{ filename }}.{{post.thumbnail-extension}}" class="project-image">
+            <img src="assets/posts/{{ category_name }}/{{post.name| replace: '.md', ''}}/thumbnail.{{post.thumbnail-extension}}" class="project-image">
 
             <div class="project-button-read-more">Read More</div>
     
