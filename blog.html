@@ -14,7 +14,9 @@ title: Blog
 
         <div class="project">
             
-            <img src="assets/posts/{{ category_name }}/{{post.name| replace: '.md', ''}}/thumbnail.{{post.thumbnail-extension}}" class="project-image">
+            {% assign my_variable = post.date | date: "%Y-%m-%d" %}
+
+            <img src="assets/posts/{{ category_name }}/{{ my_variable }}-{{post.slug}}/thumbnail.{{post.thumbnail-extension}}" class="project-image">
 
             <div class="project-button-read-more">Read More</div>
     
