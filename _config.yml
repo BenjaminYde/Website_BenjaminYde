@@ -56,22 +56,5 @@ load_paths:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-collections:
-  authors:
-    output: true
-
-defaults:
-  - scope:
-      path: ""
-      type: "authors"
-    values:
-      layout: "author"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: ""
-    values:
-      layout: "default"    
+# Enable safe mode
+safe: true
