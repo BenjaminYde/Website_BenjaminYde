@@ -1,6 +1,7 @@
 ---
 layout: post
 categories: Houdini
+thumbnail-extension: png
 ---
 
 # What is Houdini?
